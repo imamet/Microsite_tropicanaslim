@@ -49,11 +49,14 @@
     }
     &__bannermobile {
         display: none;
-        height: 305px;
+        width: 100%;
         z-index: 5;
         position: relative;
         background: #FFF;
         border-radius: 0px 0px 800px 800px/0px 0px 250px 250px;
+        img {
+            width: 100%;
+        }
         @include max-responsive($sm) {
             display: block;
         }
@@ -111,13 +114,18 @@
             text-align: center;
             margin-top: 7%;
             @include max-responsive($sm) {
-                font-size: 34px;
+                font-size: 25px;
             }
         }
         &--4 {
             color: #000000;
             font-size: 21px;
             margin-top: -30px;
+            @include max-responsive($sm) {
+                font-size: 12px;
+                margin-top: -23px;
+                font-weight: bold;
+            }
         }
         &--5 {
             position: relative;
@@ -178,7 +186,7 @@
                 border-radius: 30px;
                 height: 382px;
                 @include max-responsive($sm) {
-                    height: 200px;
+                    height: auto;
                 }
             }
         }
@@ -197,18 +205,24 @@
                 font-weight: bold;
                 text-align: left;
                 margin-top: -10px;
+                @include max-responsive($sm) {
+                    font-size: 18px;
+                }
             }
             &--time {
                 color: #F59425;
                 margin-top: -15px;
                 margin-bottom: 10px;
                 font-size: 16px;
+                @include max-responsive($sm) {
+                    font-size: 12px;
+                }
             }
             &--subtitle {
                 font-weight: 500;
                 font-size: 18px;
                 @include max-responsive($sm) {
-                    font-size: 14px;
+                    font-size: 12px;
                 }
             }
         }
